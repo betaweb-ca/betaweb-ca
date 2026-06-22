@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { contact, site } from '../data/siteContent.js';
 import SectionHeading from './SectionHeading.jsx';
+import ContactDetails from './ContactDetails.jsx';
 import { getIcon } from './iconMap.js';
 
 export default function ContactForm() {
@@ -58,12 +59,15 @@ export default function ContactForm() {
     <section id="contact" className="py-20 sm:py-28">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          <SectionHeading
-            eyebrow={contact.eyebrow}
-            title={contact.title}
-            subtitle={contact.subtitle}
-            align="left"
-          />
+          <div>
+            <SectionHeading
+              eyebrow={contact.eyebrow}
+              title={contact.title}
+              subtitle={contact.subtitle}
+              align="left"
+            />
+            <ContactDetails className="mt-8" />
+          </div>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -80,9 +84,13 @@ export default function ContactForm() {
                 <p className="mt-4 text-[14px] text-[#52525B]">
                   Didn&apos;t open?{' '}
                   <a href={`mailto:${site.email}`} className="text-[#4F7CFF] hover:underline">
-                    Email {site.email}
+                    Email us
                   </a>{' '}
-                  directly.
+                  or{' '}
+                  <a href={`tel:+1${site.phone}`} className="text-[#4F7CFF] hover:underline">
+                    call {site.phoneDisplay}
+                  </a>
+                  .
                 </p>
               </div>
             ) : (

@@ -47,10 +47,16 @@ export default function FinalCTA() {
                 {ArrowRight && <ArrowRight className="w-4 h-4" />}
               </a>
               <a
+                href={`tel:+1${site.phone}`}
+                className="inline-flex items-center justify-center h-12 px-6 rounded-full border border-white/20 text-white hover:bg-white/5 transition-colors text-[14px] font-medium"
+              >
+                {site.phoneDisplay}
+              </a>
+              <a
                 href={`mailto:${site.email}`}
                 className="inline-flex items-center justify-center h-12 px-6 rounded-full border border-white/20 text-white hover:bg-white/5 transition-colors text-[14px] font-medium break-all sm:break-normal"
               >
-                {finalCta.secondaryCta}
+                {site.email}
               </a>
             </div>
           </div>

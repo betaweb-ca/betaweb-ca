@@ -100,6 +100,13 @@ export default function Navbar() {
             >
               {site.email}
             </a>
+            <a
+              href={`tel:+1${site.phone}`}
+              onClick={closeMenu}
+              className="py-2 text-center text-[14px] text-[#71717A]"
+            >
+              {site.phoneDisplay}
+            </a>
           </nav>
         </div>
       )}

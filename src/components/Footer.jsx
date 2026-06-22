@@ -11,6 +11,20 @@ export default function Footer() {
           <p className="mt-4 max-w-xs text-[14px] text-[#71717A] leading-relaxed">
             {footer.tagline}
           </p>
+          <div className="mt-4 space-y-1 text-[14px]">
+            <a
+              href={`mailto:${site.email}`}
+              className="block text-[#52525B] hover:text-[#0A0A0A] transition-colors"
+            >
+              {site.email}
+            </a>
+            <a
+              href={`tel:+1${site.phone}`}
+              className="block text-[#52525B] hover:text-[#0A0A0A] transition-colors"
+            >
+              {site.phoneDisplay}
+            </a>
+          </div>
           <div className="mt-5 flex items-center gap-2">
             {footer.social.map((social) => {
               const Icon = getIcon(social.icon);

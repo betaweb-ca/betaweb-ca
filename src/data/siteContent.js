@@ -6,6 +6,8 @@ export const site = {
   name: 'BetaWeb',
   domain: 'betaweb.ca',
   email: 'betaweb.ca@gmail.com',
+  phone: '6477030295',
+  phoneDisplay: '(647) 703-0295',
   location: 'Built in Canada',
   copyrightYear: 2026,
   seo: {
